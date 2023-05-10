@@ -3,7 +3,6 @@ const { read, register } = require("./operations.js");
 /*  */
 const arguments = process.argv.slice(2);
 
-console.log("Los argumentos son: ", arguments);
 
 const action = arguments[0];
 
@@ -28,5 +27,5 @@ if (action === "register") {
 } else if (action === "read") {
   read();
 } else {
-  return console.log("Invalid Action");
+  return console.log("❌ Invalid Action ❌");
 }
