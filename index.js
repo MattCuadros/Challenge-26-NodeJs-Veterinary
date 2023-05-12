@@ -3,7 +3,6 @@ const { read, register } = require("./operations.js");
 /*  */
 const arguments = process.argv.slice(2);
 
-
 const action = arguments[0];
 
 const name = arguments[1];
@@ -13,13 +12,7 @@ const color = arguments[4];
 const diagnostic = arguments[5];
 
 if (action === "register") {
-  if (
-    name === undefined ||
-    age === undefined ||
-    animal === undefined ||
-    color === undefined ||
-    diagnostic === undefined
-  ) {
+  if (!name || !age || !animal || !color || !diagnostic) {
     return console.log("⚠ Please fill in all the fields. ❗");
   } else {
     register(name, age, animal, color, diagnostic);
